@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import he from 'he'
-import '../assets/css/Waste.css';
+import '../Assets/css/Waste.css';
 import { FaStar } from 'react-icons/fa'
 
 class Waste extends Component {

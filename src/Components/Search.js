@@ -5,7 +5,7 @@ import {
 }
 from 'react-icons/fa'
 import Fuse from 'fuse.js'
-import '../assets/css/Search.css';
+import '../Assets/css/Search.css';
 
 import Services from '../Services'
 
