@@ -1,0 +1,9 @@
+.Banner {
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to left, #1E9662, #075992);
+  font-size: 57px;
+  padding: 67px;
+  margin: 21px 0;
+}
