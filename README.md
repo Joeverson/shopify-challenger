@@ -66,3 +66,15 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+# icons
+
+[icons - sheetset](https://react-icons.netlify.com/#/icons/fa)
+
+# Search json
+
+[Fase.io - search itens in JSON](http://fusejs.io)
+
+# EndPoint
+
+[JSON - endpoint](https://secure.toronto.ca/cc_sr_v1/data/swm_waste_wizard_APR?limit=1000&keywords=biodegradable)
