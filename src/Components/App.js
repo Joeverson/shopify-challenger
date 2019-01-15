@@ -6,37 +6,46 @@ import Search from './Search'
 import Waste from './Waste'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      filtered: [],
-      favorited: []
-    }
-
-    this.handleFiltered = this.handleFiltered.bind(this)
-    this.handleClearFiltered = this.handleClearFiltered.bind(this)
-    this.handleClickedStar = this.handleClickedStar.bind(this)
+  state = {
+    filtered: [],
+    favorited: []
   }
-
-  handleFiltered(data) {
+  
+  handleFiltered = (data) => {
     this.setState({
       filtered: data
     })
   }
 
-  handleClearFiltered() {
+  handleClearFiltered = () => {
     this.setState({
       filtered: []
     })
   }
 
-  handleClickedStar(waste) {
-    console.log(waste);
-    
-    // this.setState({
-    //   favorited: [...this.state.favorited, waste]
-    // })
+  handleClickedStar = (waste) => {
+    if(waste.isFavorited) {
+      waste.isFavorited = false
+      
+      this.setState({
+        favorited: [...this.state.favorited.filter(favotite => favotite !== waste)]
+      })
+    } else {
+      waste.isFavorited = true
+  
+      this.setState({
+        favorited: [...this.state.favorited, waste]
+      })
+    }
+  }
+
+  _listFavorites = () => {
+    if (this.state.favorited.length > 0) {
+      return (
+        <Waste title="Favourites" data={ this.state.favorited }
+          onClickedStar={ this.handleClickedStar }></Waste>
+      )
+    }
   }
 
   render() {
@@ -51,7 +60,7 @@ class App extends Component {
           onClickedStar={ this.handleClickedStar }></Waste>
 
         {/* west favorited */}
-        <Waste title="Favourites" data={ this.state.favorited }></Waste>
+        { this._listFavorites() }
       </div>
     );
   }

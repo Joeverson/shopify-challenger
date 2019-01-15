@@ -31,7 +31,8 @@
 }
 
 .Waste-no-data {
-  text-align: center
+  text-align: center;
+  color: #B0B0B0
 }
 
 .Waste-item {

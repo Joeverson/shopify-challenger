@@ -1,9 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+// import { expect } from 'chai'
+// import ReactDOM from 'react-dom';
+import sinon from 'sinon'
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+import App from '../Components/App';
+import Waste from '../Components/Waste';
+import Search from '../Components/Search';
+import Banner from '../Components/Banner';
+
+
+it('renders App without crashing', () => {
+  const wrapper = shallow(<App/>)
+
+  expect(wrapper.find(<Banner></Banner>)).toBeTruthy();    
+  expect(wrapper.find(<Search></Search>)).toBeTruthy();
+  expect(wrapper.find(<Waste></Waste>)).toBeTruthy();
 });

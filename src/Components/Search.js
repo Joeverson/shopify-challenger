@@ -35,7 +35,8 @@ class Search extends Component {
     this._isSearching(true)
     var options = {
       shouldSort: true,
-      threshold: 0.5,
+      tokenize: true,
+      threshold: 0.1,
       location: 0,
       distance: 100,
       maxPatternLength: 32,
@@ -46,7 +47,7 @@ class Search extends Component {
     };
     var fuse = new Fuse((await Services.waste.get()), options);
     var result = fuse.search(search).map(data => ({...data, isFavorited: false}));
-    
+        
     this.props.onFiltered(result)
 
     this._isSearching(false)
