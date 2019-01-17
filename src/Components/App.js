@@ -37,7 +37,7 @@ class App extends Component {
       waste.isFavorited = false
       
       this.setState({
-        favorited: [...this.state.favorited.filter(favotite => favotite !== waste)]
+        favorited: [...this.state.favorited.filter(favorite => favorite.keywords !== waste.keywords && favorite.title !== waste.title)]
       })
     } else {
       waste.isFavorited = true
@@ -52,7 +52,7 @@ class App extends Component {
     if (this.state.favorited.length > 0) {
       return (
         <Waste title="Favourites" data={ this.state.favorited }
-          onClickedStar={ this.handleClickedStar }></Waste>
+          onClickedStar={ (waste) => this.handleClickedStar(waste) }></Waste>
       )
     }
   }
