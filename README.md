@@ -1,5 +1,7 @@
 # Shopify challenger
-Hi, my name is joerverson santos, o what like? good... developer and create new systems and resolve problems that exist in around us.
+Hi, my name is joerverson santos. Well ... I'm a web developer and I like to create new systems and solve problems that exist around us.
+
+Am web developer about 5 years, I have finished of the degree in IFPB - Institute Federal of the Paraíba, but before entering my degree I always enjoyed creating many things like small programs that me helped in ativity the day, by exemple. I've always liked challenges and to known new things. I've been 24 years old, worked in four companies in Brazil and I have done some freelancers. best of talk to me is to see my account in github ^ ^ - https://github.com/Joeverson
 
 # What i'm using?
 ## icons
