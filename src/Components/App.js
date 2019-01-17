@@ -11,9 +11,18 @@ class App extends Component {
     favorited: []
   }
   
+  hasFavorited(filtered) {
+    return this.state.favorited.filter(waste =>
+      waste.title === filtered.title && waste.keyworks === filtered.keyworks)[0] || false
+  }
+
   handleFiltered = (data) => {
     this.setState({
-      filtered: data
+      filtered: data.map(filtered => {        
+        return { ...filtered,
+          isFavorited: this.hasFavorited(filtered)
+        }
+      })
     })
   }
 
